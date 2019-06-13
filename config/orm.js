@@ -1,4 +1,4 @@
-var connection=require("connection.js");
+var connection=require("./connection");
 
 var orm = {
     selectAll: function(cb){ // cb means call back. we send all result inside of this function
@@ -16,7 +16,7 @@ var orm = {
     insertOne: function(userBurger ,cb){
         var query = "INSERT INTO burgers";
         query += " (burger_name) ";
-        query += "VALUES ("+  userBurger + ");"
+        query += "VALUES ('"+  userBurger + "');"
         //devoured default is false. 
         //Whenever client enter a burger name it will go no eaten part.
 
@@ -29,9 +29,10 @@ var orm = {
 
             cb(result);
         })
-    },
+    }, 
 
     updateOne: function(changedBurgerOldCondition, IDnumber ,cb){
+        var changedBurgerCondition=false;
         if (changedBurgerOldCondition==true) changedBurgerCondition=false;
         else if(changedBurgerOldCondition==false) changedBurgerCondition=true;
         var query = "UPDATE burgers";
@@ -39,7 +40,7 @@ var orm = {
         query += "devoured=";
         query += changedBurgerCondition
         query += " WHERE ";
-        query += "id=" + IDnumber;
+        query += "id = " + IDnumber + " ;" ;
         console.log(query);
         connection.query(query, function(err, result) {
             if (err) {
