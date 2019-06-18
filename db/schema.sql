@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS sh7uq68n0xw5vmp0;
-CREATE DATABASE sh7uq68n0xw5vmp0;
-USE sh7uq68n0xw5vmp0;
+DROP DATABASE IF EXISTS uiqcs2dhuvnhtrau;
+CREATE DATABASE uiqcs2dhuvnhtrau;
+USE uiqcs2dhuvnhtrau;
 
 CREATE TABLE burgers
 (

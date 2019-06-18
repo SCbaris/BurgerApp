@@ -16,7 +16,7 @@ var burger = {
       cb(res);
     });
   }
-};
+}; // Using ORM in our code.
 
 //send to the controller
 module.exports = burger;

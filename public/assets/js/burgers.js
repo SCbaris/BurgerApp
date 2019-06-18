@@ -11,7 +11,7 @@ $(function() {
       // Send the PUT request. 
       // Put request is similar to update.
       // When we send, updateOne gonna take it.
-      //red.params.id = id olacak
+      //red.params.id = id 
       //
       $.ajax("/api/burgers/" + id, {
         type: "PUT",

@@ -14,11 +14,11 @@ if (process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 }else {
   connection = mysql.createConnection({
-    host: "u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    user: "orrw31xrqfwildz0",
-    password: "y8q1839rosr54jdx",
-    database: "sh7uq68n0xw5vmp0"
-  });
+    host: "	u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    user: "	feizonjnjthaln6x",
+    password: "rov9p35ht1dc7ngb",
+    database: "uiqcs2dhuvnhtrau"
+  }); // JawsDB initilization
 }
 
 // Make connection.
@@ -32,3 +32,4 @@ connection.connect(function(err) {
 
 // Export connection for our ORM to use.
 module.exports = connection;
+
